@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import json
+import time
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -71,7 +72,7 @@ detailed_report = classification_report(y_test, predictions, output_dict=True)
 print(f"Model Training Complete! Overall Accuracy: {overall_accuracy * 100:.2f}%\n")
 
 # ---------------------------------------------------------
-# 5. REAL-TIME JSON INFERENCE ENGINE (Updated for detailed stats)
+# 5. REAL-TIME JSON INFERENCE ENGINE (Simplified Output)
 # ---------------------------------------------------------
 def process_live_eeg_to_json(eeg_feature_vector, overall_acc, class_report):
     # 1. Convert to DataFrame
@@ -93,48 +94,54 @@ def process_live_eeg_to_json(eeg_feature_vector, overall_acc, class_report):
         "neutral": "none"
     }
     
-    # 5. Build the detailed list with individual accuracies
-    individual_commands_list = []
-    for cmd, action in command_mapping.items():
-        # Look up the specific accuracy (recall) for this command from the report
-        # It defaults to 0.0 if the command isn't found for some reason
-        cmd_accuracy = class_report.get(cmd, {}).get('recall', 0.0) * 100
-        
-        individual_commands_list.append({
-            "mental_command": cmd,
-            "action_triggered": action,
-            "training_accuracy": f"{cmd_accuracy:.2f}%"
-        })
+    # 5. Get the specific training accuracy just for THIS predicted command
+    cmd_accuracy = class_report.get(ml_prediction, {}).get('recall', 0.0) * 100
     
-    # 6. Build the final output dictionary
+    # 6. Build the simplified output dictionary exactly as requested
     output_data = {
-        "system_status": {
-            "overall_accuracy": f"{overall_acc * 100:.2f}%",
-            "active_sensors": len(live_df.columns)
-        },
-        "commands_status": individual_commands_list,
-        "live_prediction": {
-            "mental_command": ml_prediction,
-            "action_triggered": command_mapping.get(ml_prediction, "unknown")
-        }
+        "mental_command": ml_prediction,
+        "action_triggered": command_mapping.get(ml_prediction, "unknown"),
+        "training_accuracy": f"{cmd_accuracy:.2f}%"
     }
     
     # 7. Return formatted JSON
     return json.dumps(output_data, indent=4)
 
 # ---------------------------------------------------------
-# 6. SIMULATE LIVE DATA FEED
+# 6. SIMULATE CONTINUOUS LIVE DATA STREAM (50 Rows Only)
 # ---------------------------------------------------------
-print("--- Simulating Live Headset WebSockets Feed ---")
-
-# Grab a sample row from our test data
-sample_live_data = X_test.iloc[150].values 
-
-# Feed the live data AND the performance metrics into the function
-final_json_output = process_live_eeg_to_json(sample_live_data, overall_accuracy, detailed_report)
-
-print(final_json_output)
+print("--- Simulating Live Headset Data Stream (Limited to 50 predictions) ---")
 
 output_path = Path(__file__).with_name('live_bci_output.json')
-output_path.write_text(final_json_output + '\n', encoding='utf-8')
-print(f"Saved JSON output to: {output_path}")
+
+# Clear the file and open the JSON array
+output_path.write_text("[\n", encoding='utf-8') 
+
+try:
+    # ADDED: .head(50) limits the loop to exactly 50 rows
+    for index, row in X_test.head(50).iterrows():
+        
+        current_live_data = row.values
+        final_json_output = process_live_eeg_to_json(current_live_data, overall_accuracy, detailed_report)
+        
+        # APPEND the JSON to the file
+        with open(output_path, "a", encoding="utf-8") as log_file:
+            log_file.write(final_json_output + ",\n")
+        
+        # Print the exact JSON format directly to the terminal
+        print(final_json_output)
+        print("-" * 30)
+        
+        time.sleep(0.5)
+
+    # This will automatically run when the 50 rows are finished
+    print("\n✅ Successfully processed and saved 50 predictions!")
+
+except KeyboardInterrupt:
+    print("\n🛑 Data stream manually stopped by user.")
+    
+# Close the JSON array properly at the very end
+with open(output_path, "a", encoding="utf-8") as log_file:
+    log_file.write("]\n")
+    
+print("Simulation complete.")

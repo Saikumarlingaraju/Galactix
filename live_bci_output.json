@@ -1,0 +1,252 @@
+[
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "right",
+    "action_triggered": "previous track",
+    "training_accuracy": "12.59%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "right",
+    "action_triggered": "previous track",
+    "training_accuracy": "12.59%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "push",
+    "action_triggered": "play/pause",
+    "training_accuracy": "8.96%"
+},
+{
+    "mental_command": "neutral",
+    "action_triggered": "none",
+    "training_accuracy": "23.30%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "neutral",
+    "action_triggered": "none",
+    "training_accuracy": "23.30%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "push",
+    "action_triggered": "play/pause",
+    "training_accuracy": "8.96%"
+},
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "right",
+    "action_triggered": "previous track",
+    "training_accuracy": "12.59%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "neutral",
+    "action_triggered": "none",
+    "training_accuracy": "23.30%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "push",
+    "action_triggered": "play/pause",
+    "training_accuracy": "8.96%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "right",
+    "action_triggered": "previous track",
+    "training_accuracy": "12.59%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "left",
+    "action_triggered": "next track",
+    "training_accuracy": "15.87%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+{
+    "mental_command": "neutral",
+    "action_triggered": "none",
+    "training_accuracy": "23.30%"
+},
+{
+    "mental_command": "lift",
+    "action_triggered": "volume down",
+    "training_accuracy": "39.47%"
+},
+{
+    "mental_command": "right",
+    "action_triggered": "previous track",
+    "training_accuracy": "12.59%"
+},
+{
+    "mental_command": "pull",
+    "action_triggered": "volume up",
+    "training_accuracy": "47.88%"
+},
+]
