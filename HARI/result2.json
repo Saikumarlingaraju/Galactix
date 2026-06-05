@@ -1,0 +1,268 @@
+[
+    {
+        "sample_id": 1004,
+        "command": "LEFT_HAND",
+        "confidence": 0.9159,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1032,
+        "command": "REST",
+        "confidence": 0.8076,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1033,
+        "command": "LEFT_HAND",
+        "confidence": 0.9575,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1049,
+        "command": "REST",
+        "confidence": 0.7743,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1050,
+        "command": "LEFT_HAND",
+        "confidence": 0.931,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1054,
+        "command": "REST",
+        "confidence": 0.744,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1055,
+        "command": "LEFT_HAND",
+        "confidence": 0.969,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1098,
+        "command": "REST",
+        "confidence": 0.7516,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1099,
+        "command": "LEFT_HAND",
+        "confidence": 0.9278,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1101,
+        "command": "REST",
+        "confidence": 0.7946,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1104,
+        "command": "RIGHT_HAND",
+        "confidence": 0.8597,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1105,
+        "command": "REST",
+        "confidence": 0.6029,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1106,
+        "command": "LEFT_HAND",
+        "confidence": 0.9754,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1109,
+        "command": "REST",
+        "confidence": 0.778,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1110,
+        "command": "LEFT_HAND",
+        "confidence": 0.959,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1120,
+        "command": "RIGHT_HAND",
+        "confidence": 0.9741,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1150,
+        "command": "REST",
+        "confidence": 0.7958,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1151,
+        "command": "RIGHT_HAND",
+        "confidence": 0.9445,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1193,
+        "command": "REST",
+        "confidence": 0.7831,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1195,
+        "command": "RIGHT_HAND",
+        "confidence": 0.941,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1232,
+        "command": "REST",
+        "confidence": 0.7673,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1233,
+        "command": "RIGHT_HAND",
+        "confidence": 0.906,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1280,
+        "command": "REST",
+        "confidence": 0.7233,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1442,
+        "command": "LEFT_HAND",
+        "confidence": 0.9807,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1454,
+        "command": "REST",
+        "confidence": 0.8405,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1458,
+        "command": "LEFT_HAND",
+        "confidence": 0.9506,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1473,
+        "command": "REST",
+        "confidence": 0.7855,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1476,
+        "command": "LEFT_HAND",
+        "confidence": 0.9663,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1525,
+        "command": "REST",
+        "confidence": 0.6091,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1526,
+        "command": "RIGHT_HAND",
+        "confidence": 0.9707,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1529,
+        "command": "REST",
+        "confidence": 0.9569,
+        "jiosaavn_action": "Play / Pause",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1531,
+        "command": "LEFT_HAND",
+        "confidence": 0.9633,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1600,
+        "command": "REST",
+        "confidence": 0.7637,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1603,
+        "command": "RIGHT_HAND",
+        "confidence": 0.9714,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1746,
+        "command": "REST",
+        "confidence": 0.8363,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1747,
+        "command": "RIGHT_HAND",
+        "confidence": 0.9563,
+        "jiosaavn_action": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1759,
+        "command": "REST",
+        "confidence": 0.7687,
+        "jiosaavn_action": "Play / Pause",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1920,
+        "command": "LEFT_HAND",
+        "confidence": 0.9539,
+        "jiosaavn_action": "Previous Track",
+        "status": "verified"
+    }
+]

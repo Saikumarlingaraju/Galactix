@@ -1,0 +1,149 @@
+[
+    {
+        "sample_id": 1007,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9684,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1036,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9798,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1053,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.938,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1058,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9091,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1101,
+        "raw_brain_state": "REST",
+        "confidence": 0.7946,
+        "jiosaavn_trigger": "Previous Track",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1105,
+        "raw_brain_state": "REST",
+        "confidence": 0.6029,
+        "jiosaavn_trigger": "Next Track",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1109,
+        "raw_brain_state": "REST",
+        "confidence": 0.778,
+        "jiosaavn_trigger": "Previous Track",
+        "status": "rejected_low_confidence"
+    },
+    {
+        "sample_id": 1113,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9255,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1120,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9741,
+        "jiosaavn_trigger": "Play / Pause",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1123,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9718,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1154,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9555,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1198,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.911,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1236,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9306,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1445,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.974,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1461,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9745,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1479,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.919,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1529,
+        "raw_brain_state": "REST",
+        "confidence": 0.9569,
+        "jiosaavn_trigger": "Next Track",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1534,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9341,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1606,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9547,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1750,
+        "raw_brain_state": "RIGHT_HAND",
+        "confidence": 0.9688,
+        "jiosaavn_trigger": "Volume Up",
+        "status": "verified"
+    },
+    {
+        "sample_id": 1923,
+        "raw_brain_state": "LEFT_HAND",
+        "confidence": 0.9777,
+        "jiosaavn_trigger": "Volume Down",
+        "status": "verified"
+    }
+]

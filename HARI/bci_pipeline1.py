@@ -8,6 +8,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import classification_report, accuracy_score
+import ctypes
+import time
 # ---------------------------------------------------------
 # PHASE 1: LOAD & FILTER BIOLOGICAL FEATURES (From CSV)
 # ---------------------------------------------------------
@@ -90,33 +92,140 @@ print("-" * 40)
 print(classification_report(y_test, predictions))
 
 # ---------------------------------------------------------
-# REAL-TIME INFERENCE: GENERATING THE HARDWARE PAYLOAD
+# REAL-TIME INFERENCE & JIOSAAVN COMMAND MAPPER
 # ---------------------------------------------------------
-print("\n--- Simulating Live Headset Output ---")
+print("\n--- Simulating Live JioSaavn Output ---")
 
 CONFIDENCE_THRESHOLD = 0.85  
 
-for index, row in X_test.head(10).iterrows(): # Bumped to 10 frames to see more results
+# Variables to track the "State Machine" (Memory)
+current_thought = "REST"
+thought_duration = 0
+
+# Collect triggered actions for saving to disk
+output_results = []
+
+# Delay (seconds) after triggering an action to avoid rapid-fire events
+ACTION_DELAY = 1.0
+
+# Grab 100 continuous, chronological frames from the middle of the recording
+continuous_time_slice = X_smoothed.iloc[1000:2000]
+
+VK_MEDIA_PLAY_PAUSE = 0xB3
+VK_MEDIA_NEXT_TRACK = 0xB0
+VK_MEDIA_PREV_TRACK = 0xB1
+VK_VOLUME_UP = 0xAF
+VK_VOLUME_DOWN = 0xAE
+
+def press_vk(vk):
+    ctypes.windll.user32.keybd_event(vk, 0, 0, 0)
+    time.sleep(0.05)
+    ctypes.windll.user32.keybd_event(vk, 0, 2, 0)
+
+vk_mapping = {
+    "Play / Pause": VK_MEDIA_PLAY_PAUSE,
+    "Next Track": VK_MEDIA_NEXT_TRACK,
+    "Previous Track": VK_MEDIA_PREV_TRACK,
+    "Volume Up": VK_VOLUME_UP,
+    "Volume Down": VK_VOLUME_DOWN
+}
+
+for index, row in continuous_time_slice.iterrows():
     frame_df = pd.DataFrame([row.values], columns=X_smoothed.columns)
     frame_scaled = scaler.transform(frame_df)
-    
+
     probs = calibrated_svm.predict_proba(frame_scaled)[0]
     max_prob = np.max(probs)
     predicted_class = calibrated_svm.classes_[np.argmax(probs)]
-    
+
+    # 1. Verification Gate
     if max_prob < CONFIDENCE_THRESHOLD:
-        final_command = "REST"
+        verified_state = "REST"
         status = "rejected_low_confidence"
     else:
-        final_command = predicted_class
+        verified_state = predicted_class
         status = "verified"
-        
+
+    # 2. The JioSaavn Sequence Logic (State Machine)
+    jiosaavn_action = "None"
+
+    # If the user is holding the same thought, count how long they hold it
+    if verified_state == current_thought and verified_state != "REST":
+        thought_duration += 1
+
+        # "Long Hold" Logic (Volume Control)
+        if thought_duration == 4:  # Triggered exactly on the 4th consecutive frame
+            if current_thought == "RIGHT_HAND":
+                jiosaavn_action = "Volume Up"
+            elif current_thought == "LEFT_HAND":
+                jiosaavn_action = "Volume Down"
+
+    # If the user changed their thought (e.g., REST -> LEFT_HAND, or LEFT -> REST)
+    elif verified_state != current_thought:
+        # "Quick Click" Logic (Track Navigation)
+        # We trigger this when they release the thought back to REST
+        if verified_state == "REST" and thought_duration > 0 and thought_duration < 4:
+            if current_thought == "RIGHT_HAND":
+                jiosaavn_action = "Next Track"
+            elif current_thought == "LEFT_HAND":
+                jiosaavn_action = "Previous Track"
+
+        # "Combo" Logic (Play/Pause)
+        if current_thought == "LEFT_HAND" and verified_state == "RIGHT_HAND":
+            jiosaavn_action = "Play / Pause"
+
+        # Update memory for the next loop
+        current_thought = verified_state
+        thought_duration = 1 if verified_state != "REST" else 0
+
+    # 3. Build the final Payload
     payload = {
         "sample_id": int(index),
-        "command": final_command,
-        "raw_prediction": predicted_class,
+        "raw_brain_state": verified_state,
         "confidence": round(float(max_prob), 4),
+        "jiosaavn_trigger": jiosaavn_action,
         "status": status
     }
+
+    # 4. Trigger and log actions
+    if jiosaavn_action != "None":
+            # Save and print the payload
+            output_results.append(payload)
+            print(json.dumps(payload, indent=4))
+
+            # Only trigger hardware actions for verified predictions
+            if status == "verified":
+                target_vk = vk_mapping.get(jiosaavn_action)
+                if target_vk:
+                    press_vk(target_vk)
+
+            # Wait between actions/outputs to avoid rapid toggles
+            time.sleep(ACTION_DELAY)
+        
+
+# Save collected outputs to result1.json
+output_path = Path(__file__).with_name("result1.json")
+with open(output_path, "w") as f:
+    json.dump(output_results, f, indent=4)
+
+print(f"\n✅ Simulation Complete. Saved {len(output_results)} actions to {output_path.name}")
+    # 3. Build the final Payload
+#     payload = {
+#         "sample_id": int(index),
+#         "raw_brain_state": verified_state,
+#         "confidence": round(float(max_prob), 4),
+#         "jiosaavn_trigger": jiosaavn_action
+#     }
     
-    print(json.dumps(payload, indent=4))
+#     # Only print if an action was actually triggered to reduce terminal spam
+#     if jiosaavn_action != "None":
+#         # Save action to our results list and print
+#         output_results.append(payload)
+#         print(json.dumps(payload, indent=4))
+
+# # Save collected outputs to result1.json
+# output_path = Path(__file__).with_name("result1.json")
+# with open(output_path, "w") as f:
+#     json.dump(output_results, f, indent=4)
+
+# print(f"\n✅ Simulation Complete. Saved {len(output_results)} actions to {output_path.name}")
