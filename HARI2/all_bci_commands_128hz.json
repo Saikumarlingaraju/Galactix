@@ -1,0 +1,206 @@
+[
+    {
+        "Timestamp": 0.0,
+        "Confidence_Score": 0.954,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 2.0,
+        "Confidence_Score": 0.774,
+        "Command": "Push",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 7.0,
+        "Confidence_Score": 0.963,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 9.0,
+        "Confidence_Score": 0.807,
+        "Command": "Drop",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 14.0,
+        "Confidence_Score": 0.971,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 16.0,
+        "Confidence_Score": 0.888,
+        "Command": "Drop",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 21.0,
+        "Confidence_Score": 0.992,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 23.0,
+        "Confidence_Score": 0.836,
+        "Command": "Push",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 28.0,
+        "Confidence_Score": 0.957,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 30.0,
+        "Confidence_Score": 0.843,
+        "Command": "Lift",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 35.0,
+        "Confidence_Score": 0.964,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 37.0,
+        "Confidence_Score": 0.951,
+        "Command": "Push",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 44.0,
+        "Confidence_Score": 0.981,
+        "Command": "Left",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 49.0,
+        "Confidence_Score": 0.959,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 51.0,
+        "Confidence_Score": 0.982,
+        "Command": "Right",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 56.0,
+        "Confidence_Score": 0.95,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 58.0,
+        "Confidence_Score": 0.789,
+        "Command": "Lift",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 63.0,
+        "Confidence_Score": 0.977,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 65.0,
+        "Confidence_Score": 0.971,
+        "Command": "Push",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 70.0,
+        "Confidence_Score": 0.964,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 72.0,
+        "Confidence_Score": 0.881,
+        "Command": "Drop",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 77.0,
+        "Confidence_Score": 0.967,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 79.0,
+        "Confidence_Score": 0.81,
+        "Command": "Pull",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 84.0,
+        "Confidence_Score": 0.961,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 86.0,
+        "Confidence_Score": 0.885,
+        "Command": "Drop",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 91.0,
+        "Confidence_Score": 0.957,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 93.0,
+        "Confidence_Score": 0.845,
+        "Command": "Right",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 98.0,
+        "Confidence_Score": 0.955,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 100.0,
+        "Confidence_Score": 0.891,
+        "Command": "Drop",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 105.0,
+        "Confidence_Score": 0.992,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 107.0,
+        "Confidence_Score": 0.834,
+        "Command": "Push",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 112.0,
+        "Confidence_Score": 0.972,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    },
+    {
+        "Timestamp": 114.0,
+        "Confidence_Score": 0.821,
+        "Command": "Right",
+        "Is_Actionable": false
+    },
+    {
+        "Timestamp": 119.0,
+        "Confidence_Score": 0.988,
+        "Command": "Neutral",
+        "Is_Actionable": true
+    }
+]
