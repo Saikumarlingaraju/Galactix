@@ -22,14 +22,12 @@ VK_MEDIA_PLAY_PAUSE = 0xB3
 VK_MEDIA_NEXT_TRACK = 0xB0
 VK_MEDIA_PREV_TRACK = 0xB1
 VK_VOLUME_UP = 0xAF
-VK_VOLUME_DOWN = 0xAE
 
 COMMAND_MAP = {
     "Push": ("Play / Pause", VK_MEDIA_PLAY_PAUSE),
     "Left": ("Previous Track", VK_MEDIA_PREV_TRACK),
     "Right": ("Next Track", VK_MEDIA_NEXT_TRACK),
     "Neutral": ("Volume Up", VK_VOLUME_UP),     
-    "Drop": ("Volume Down", VK_VOLUME_DOWN),
     "Lift": ("Return to Home", "HOME_MACRO"),   
     "Pull": ("Search Album/Playlist", "MACRO") 
 }
